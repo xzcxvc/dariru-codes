@@ -55,8 +55,8 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", href: "#home", icon: Home },
     { name: "Projects", href: "#projects", icon: FolderOpen },
-    { name: "Contact", href: "#contact", icon: Mail },
     { name: "About", href: "#about", icon: User },
+    { name: "Contact", href: "#contact", icon: Mail },
   ];
 
   const handleNavClick = (href) => {
