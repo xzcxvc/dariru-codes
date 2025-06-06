@@ -11,7 +11,7 @@ import "./App.css";
 function App() {
   useEffect(() => {
     // Initialize theme on app load
-    const savedTheme = localStorage.getItem("theme") || "light";
+    const savedTheme = localStorage.getItem("theme") || "dark";
     document.documentElement.classList.toggle("dark", savedTheme === "dark");
   }, []);
 
@@ -19,7 +19,7 @@ function App() {
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
       {/* Main content sections */}
-      <main className="pt-16">
+      <main>
         <Home />
         <Projects />
         <About />

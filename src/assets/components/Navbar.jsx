@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Home, FolderOpen, Mail, User, Menu, Sun, Moon } from "lucide-react";
 
@@ -13,7 +11,7 @@ export default function Navbar() {
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
       .matches
       ? "dark"
-      : "dark";
+      : "light";
     const initialTheme = savedTheme || systemTheme;
 
     setTheme(initialTheme);
@@ -68,8 +66,8 @@ export default function Navbar() {
 
   if (isMobile) {
     return (
-      <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
-        <div className="bg-white/90 dark:bg-black/90 backdrop-blur-md border border-green-500/20 rounded-full px-6 py-3 shadow-2xl">
+      <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
+        <div className="bg-white/90 dark:bg-black/40 backdrop-blur-sm border border-green-500/20 rounded-full px-6 py-3 shadow-2xl">
           <div className="flex items-center space-x-6">
             {navItems.map((item) => {
               const IconComponent = item.icon;
@@ -89,7 +87,7 @@ export default function Navbar() {
               );
             })}
             {/* Theme toggle for mobile */}
-            {/* <button
+            <button
               onClick={toggleTheme}
               className="group relative flex flex-col items-center"
             >
@@ -103,7 +101,7 @@ export default function Navbar() {
               <span className="absolute -top-8 text-xs text-gray-800 dark:text-white bg-white/80 dark:bg-black/80 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                 {theme === "dark" ? "Light" : "Dark"}
               </span>
-            </button> */}
+            </button>
           </div>
         </div>
       </div>
@@ -140,7 +138,7 @@ export default function Navbar() {
             </div>
 
             {/* Theme toggle for desktop */}
-            {/* <button
+            <button
               onClick={toggleTheme}
               className="p-2 rounded-lg text-gray-700 dark:text-white hover:text-green-500 dark:hover:text-green-400 hover:bg-gray-100 dark:hover:bg-green-500/10 transition-all duration-300"
               aria-label="Toggle theme"
@@ -150,7 +148,7 @@ export default function Navbar() {
               ) : (
                 <Moon className="h-5 w-5" />
               )}
-            </button> */}
+            </button>
           </div>
 
           {/* Mobile menu button */}
