@@ -11,7 +11,7 @@ import "./App.css";
 function App() {
   useEffect(() => {
     // Initialize theme on app load
-    const savedTheme = localStorage.getItem("theme") || "dark";
+    const savedTheme = localStorage.getItem("dark") || "dark";
     document.documentElement.classList.toggle("dark", savedTheme === "dark");
   }, []);
 

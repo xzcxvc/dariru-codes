@@ -13,7 +13,7 @@ export default function Navbar() {
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
       .matches
       ? "dark"
-      : "light";
+      : "dark";
     const initialTheme = savedTheme || systemTheme;
 
     setTheme(initialTheme);
@@ -68,9 +68,9 @@ export default function Navbar() {
 
   if (isMobile) {
     return (
-      <div className="fixed top-6 right-6 transform">
-        <div className="bg-white/90 dark:bg-black/40 backdrop-blur-sm border border-green-500/20 rounded-full px-3 py-7 shadow-2xl">
-          <div className="flex items-center flex-col space-y-7">
+      <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
+        <div className="bg-white/90 dark:bg-black/90 backdrop-blur-md border border-green-500/20 rounded-full px-6 py-3 shadow-2xl">
+          <div className="flex items-center space-x-6">
             {navItems.map((item) => {
               const IconComponent = item.icon;
               return (
@@ -140,7 +140,7 @@ export default function Navbar() {
             </div>
 
             {/* Theme toggle for desktop */}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="p-2 rounded-lg text-gray-700 dark:text-white hover:text-green-500 dark:hover:text-green-400 hover:bg-gray-100 dark:hover:bg-green-500/10 transition-all duration-300"
               aria-label="Toggle theme"
@@ -150,7 +150,7 @@ export default function Navbar() {
               ) : (
                 <Moon className="h-5 w-5" />
               )}
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile menu button */}
