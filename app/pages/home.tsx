@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import dariru from "../../public/dariru.png";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 const Home = () => {
   return (
@@ -22,13 +24,14 @@ const Home = () => {
             technologies.
           </p>
         </div>
-
         <div className="w-full lg:order-2 order-1 lg:max-w-lg max-w-sm aspect-square overflow-hidden rounded-full">
-          <Image
-            src={dariru}
-            alt="Profile Picture"
-            className="w-full object-cover"
-          />
+          <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>
+            <Image
+              src={dariru}
+              alt="Profile Picture"
+              className="w-full object-cover"
+            />
+          </motion.div>
         </div>
       </section>
     </>
