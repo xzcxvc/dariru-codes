@@ -23,7 +23,7 @@ const Projects = async () => {
         {/* <p className="text-lg text-gray-600 dark:text-gray-300">
           Here are some of the projects I&apos;ve worked on...
         </p> */}
-        <div className="flex items-center min-h-screen justify-around gap-5 p-16">
+        <div className="flex items-center min-h-screen justify-around gap-12 p-16 overflow-x-auto min-w-screen">
           {myProjects.map((project) => (
             <Card key={project.id}>
               <h2>{project.title}</h2>
