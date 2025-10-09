@@ -7,14 +7,21 @@ import RootLayout from "./layout";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 snap-y snap-mandatory ">
       <RootLayout>
         <Navbar />
-
-        <Home />
-        <Projects />
-        <About />
-        <Contact />
+        <section className="snap-start">
+          <Home />
+        </section>
+        <section className="snap-start">
+          <Projects />
+        </section>
+        <section className="snap-start">
+          <About />
+        </section>
+        <section className="snap-start">
+          <Contact />
+        </section>
       </RootLayout>
     </div>
   );
