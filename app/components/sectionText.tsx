@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { SectionTextProps } from "../helpers/constants/interfaces";
-import { ScrollParallax } from "react-just-parallax";
+// import { ScrollParallax } from "react-just-parallax";
 import { motion, useInView } from "motion/react";
 
 const SectionText: React.FC<SectionTextProps> = ({ text, className }) => {

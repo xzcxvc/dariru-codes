@@ -5,7 +5,7 @@ import Card from "../components/card";
 import { PokemonList } from "../helpers/constants/interfaces";
 import { log } from "node:console";
 import SectionText from "../components/sectionText";
-import { myProjects } from "../constants/constants";
+import { myProjects } from "../constants/projects";
 
 const Projects = async () => {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1");

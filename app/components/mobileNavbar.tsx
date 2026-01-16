@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { navItems } from "../helpers/constants/lists";
+import { navItems } from "../constants/nav-items";
 import { Moon, Sun } from "lucide-react";
 
 export const MobileNavbar = () => {
