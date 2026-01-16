@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import NavLink from "./navlink";
 import Logo from "./logo";
 // import { Menu, Sun, Moon } from "lucide-react";
@@ -7,30 +8,55 @@ import MobileNavbar from "./mobileNavbar";
 // import Link from "next/link";
 
 const Navbar = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Load saved theme
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      setDarkMode(true);
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    setDarkMode(isDark);
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  };
+
   return (
     <>
       <MobileNavbar />
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-md border-b border-gray-200 dark:border-green-500/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Logo href={"#home"} />
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              <div className="flex items-baseline space-x-8">
+      <aside className="flex fixed h-[100vh] top-0 left-0 border-r-5 z-50 border-[#F25242] dark:border-[#F9682C] w-[110px] items-center justify-center">
+        <div className="min-h-[calc(100vh-35px)] w-20 flex flex-col justify-evenly ">
+          <div className="flex flex-col items-center justify-between min-h-[100vh] gap-12 p-8 text-[#212435]">
+            <Logo />
+            <div>
+              <ul className="flex flex-col justify-center items-center gap-12">
                 {navItems.map((item) => (
-                  <div key={item.name}>
-                    <NavLink href={item.href} label={item.name} />
-                  </div>
+                  <li key={item.name}>
+                    <NavLink href={item.href} icon={item.icon} />
+                   
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
+            {/* 🌙 Dark Mode Toggle */}
 
-           
+            <button
+              onClick={toggleDarkMode}
+              className="text-sm font-semibold hover:scale-110 transition fixed top-6 right-6"
+            >
+              {darkMode ? "☀️" : "🌙"}
+            </button>
+
+            <div className="text-center [writing-mode:vertical-rl] rotate-180 mb-8">
+              &copy; 2024 Dariru Codes
+            </div>
           </div>
         </div>
-      </nav>
+      </aside>
     </>
   );
 };

@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
+import Image from "next/image";
+import logo from "../../public/logo.png";
 
-interface LogoProps {
-  href: string;
-}
-
-const Logo: React.FC<LogoProps> = ({ href }) => {
+const Logo = () => {
   const handleNavClick = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -14,13 +12,14 @@ const Logo: React.FC<LogoProps> = ({ href }) => {
   };
 
   return (
-    <button
-      onClick={() => handleNavClick(href)}
-      className="flex items-center cursor-pointer"
-    >
-      <span className="text-2xl font-bold text-gray-900 dark:text-white">
-        Dariru <span className="text-green-500">Codes</span>
-      </span>
+    <button className="flex items-center cursor-pointer">
+      <div
+        className="text-2xl font-bold text-gray-900 dark:text-white w-20"
+        onClick={() => handleNavClick("#home")}
+      >
+        {/* Dariru <span className="text-green-500">Codes</span> */}
+        <Image src={logo} alt="Dariru Codes Logo" className="object-contain" />
+      </div>
     </button>
   );
 };

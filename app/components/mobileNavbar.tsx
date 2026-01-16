@@ -4,8 +4,8 @@ import { navItems } from "../helpers/constants/lists";
 import { Moon, Sun } from "lucide-react";
 
 export const MobileNavbar = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [theme, setTheme] = useState("dark");
+  const [isMobile, setIsMobile] = useState(true);
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -95,7 +95,7 @@ export const MobileNavbar = () => {
                   )}
                 </div>
                 <span className="absolute -top-8 text-xs text-gray-800 dark:text-white bg-white/80 dark:bg-black/80 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                  {theme === "dark" ? "Light" : "Dark"}
+                  {theme === "dark" ? "light" : "dark"}
                 </span>
               </button>
             </div>

@@ -12,7 +12,7 @@ import {
   TimelineEventProps,
   TimelineEventData,
 } from "../helpers/constants/interfaces";
-import dariru from "../../public/dariru.png";
+// import dariru from "../../public/dariru.png";
 
 const timelineData: TimelineEventData[] = [
   {
@@ -101,7 +101,7 @@ const TimelineEvent: React.FC<TimelineEventProps> = ({ event, index }) => {
           <Image
             width={24}
             height={24}
-            src={dariru}
+            src={"/"}
             alt={event.title}
             className="w-full h-40 object-cover rounded-md mt-3"
             // onError={(e) => {

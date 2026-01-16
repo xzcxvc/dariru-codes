@@ -15,15 +15,12 @@ const Projects = async () => {
   return (
     <>
       {/* Projects Section */}
-      <section
-        id="projects"
-        className="relative min-h-screen bg-gray-50 dark:bg-gray-800 "
-      >
+      <section id="projects" className="relative min-h-screen ">
         <SectionText text="MY PROJECTS" className="" />
         {/* <p className="text-lg text-gray-600 dark:text-gray-300">
           Here are some of the projects I&apos;ve worked on...
         </p> */}
-        <div className="flex items-center min-h-screen justify-around gap-12 p-16 overflow-x-auto min-w-screen">
+        <div className="flex items-center min-h-screen justify-around gap-12 p-16">
           {myProjects.map((project) => (
             <Card key={project.id}>
               <h2>{project.title}</h2>

@@ -7,7 +7,7 @@ const About = () => {
     <>
       {/* About Section */}
       <section id="about" className="relative min-h-screen">
-        <h2 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+        <h2 className="text-4xl md:text-6xl font-bold text-gray-900 ">
           <SectionText text="ABOUT ME" />
         </h2>
 

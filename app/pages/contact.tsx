@@ -7,7 +7,7 @@ const Contact = () => {
       {/* Contact Section */}
       <section
         id="contact"
-        className="relative min-h-screen bg-gray-50 dark:bg-gray-800"
+        className="relative min-h-screen "
       >
         <h2 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
           <SectionText text="GET IN TOUCH" />
