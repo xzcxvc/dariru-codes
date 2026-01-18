@@ -8,7 +8,6 @@ import RootLayout from "./layout";
 export default function App() {
   return (
     <>
-      <div className="absolute">a</div>
       <div className="pl-[110px] min-h-screen bg-[#FCEED1] dark:bg-[#212435] transition-colors duration-300 snap-y snap-mandatory ">
         <RootLayout>
           <Navbar />
