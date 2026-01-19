@@ -9,7 +9,6 @@ const SectionText: React.FC<SectionTextProps> = ({ text, className }) => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    // <ScrollParallax shouldPause={true}>
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 200 }}
@@ -17,12 +16,11 @@ const SectionText: React.FC<SectionTextProps> = ({ text, className }) => {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div
-        className={`md:text-[300px] leading-64 font-bold text-gray-900 dark:text-white/5 absolute top-40 ${className}`}
+        className={`font-bold text-gray-900 top-28 left-12 inline p-4 relative text-nowrap ${className} `}
       >
         {text}
       </div>
     </motion.div>
-    //  </ScrollParallax>
   );
 };
 

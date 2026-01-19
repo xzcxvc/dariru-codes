@@ -23,15 +23,14 @@ const Home = () => {
         </div>
         <div className="text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-            Welcome to <br />
             <span className="text-green-500">
               {"<"}Dariru Codes{" />"}
             </span>
           </h1>
-          <p className="text-xl  text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Full-stack developer creating amazing web experiences with modern
+          {/* <p className="text-xl  text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Front-end developer creating amazing web experiences with modern
             technologies.
-          </p>
+          </p> */}
         </div>
       </section>
     </>
